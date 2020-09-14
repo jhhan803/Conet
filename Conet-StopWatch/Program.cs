@@ -116,7 +116,7 @@ namespace Conet_StopWatch
         }
         static void Update(int[] myarray)
         {
-            ConsoleKeyInfo consoleKeyInfo;
+        //    ConsoleKeyInfo consoleKeyInfo;
             while (!isRenderTime())
             {
                 Console.SetCursorPosition(2, 2);

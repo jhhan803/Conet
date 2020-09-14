@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Conet", "Conet.csproj", "{33A0CBDC-08A0-4195-AEF2-DE710259D198}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Conet-ConsoleGame", "..\Conet-ConsoleGame\Conet-ConsoleGame.csproj", "{1C797580-EBD7-461F-A02D-12CEE95CE484}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Conet-ConsoleGame", "..\Conet-ConsoleGame\Conet-ConsoleGame.csproj", "{1C797580-EBD7-461F-A02D-12CEE95CE484}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Conet-StopWatch", "..\Conet-StopWatch\Conet-StopWatch.csproj", "{350BCF4A-2A69-4939-BBF0-7E66A784DCC5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Conet-StopWatch", "..\Conet-StopWatch\Conet-StopWatch.csproj", "{350BCF4A-2A69-4939-BBF0-7E66A784DCC5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Conet-Maze", "..\Conet-Maze\Conet-Maze.csproj", "{29F758E7-213A-4CD9-BFD3-2DBAB8C48DDE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Conet-Maze", "..\Conet-Maze\Conet-Maze.csproj", "{29F758E7-213A-4CD9-BFD3-2DBAB8C48DDE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Conet-2DVector", "..\Conet-2DVector\Conet-2DVector.csproj", "{4EEC341F-83D7-4357-A932-49ED491E997A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{33A0CBDC-08A0-4195-AEF2-DE710259D198}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{33A0CBDC-08A0-4195-AEF2-DE710259D198}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{33A0CBDC-08A0-4195-AEF2-DE710259D198}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{33A0CBDC-08A0-4195-AEF2-DE710259D198}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1C797580-EBD7-461F-A02D-12CEE95CE484}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1C797580-EBD7-461F-A02D-12CEE95CE484}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C797580-EBD7-461F-A02D-12CEE95CE484}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +29,10 @@ Global
 		{29F758E7-213A-4CD9-BFD3-2DBAB8C48DDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29F758E7-213A-4CD9-BFD3-2DBAB8C48DDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29F758E7-213A-4CD9-BFD3-2DBAB8C48DDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EEC341F-83D7-4357-A932-49ED491E997A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EEC341F-83D7-4357-A932-49ED491E997A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EEC341F-83D7-4357-A932-49ED491E997A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EEC341F-83D7-4357-A932-49ED491E997A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
