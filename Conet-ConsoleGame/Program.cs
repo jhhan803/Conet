@@ -44,10 +44,10 @@ namespace Conet_ConsoleGame
          };
 
         //테스트
-        static void ShowPanel()ㄴ
+        static void ShowPanel()
         {
             Console.SetCursorPosition(0, 0);
-;            for (int i = 0; i < map.GetLength(0); i++)
+           for (int i = 0; i < map.GetLength(0); i++)
             {
                 for (int j = 0; j < map.GetLength(1); j++)
                 {
@@ -164,7 +164,6 @@ namespace Conet_ConsoleGame
         }
         static void Move(int HorseNumber, int moveCount)
         {
-            int before=0;
             Console.SetCursorPosition(20, 24);
             Console.WriteLine($"움직인 횟수{moveCount}");
             int moveTarget = 0;
@@ -185,8 +184,6 @@ namespace Conet_ConsoleGame
             }
 
 
-
-
             for (int k = 0; k < moveCount; k++)
             {
                 //캐치or캐리 추가할것
@@ -203,7 +200,6 @@ namespace Conet_ConsoleGame
                                 Printmap[horseX, horseY] = BackUpmap[horseX, horseY];
                                 horseX = i;
                                 horseY = j;
-                                before = map[i, j];
                             }
                         }
                     }
@@ -211,23 +207,6 @@ namespace Conet_ConsoleGame
                 else if (moveTarget == 10 && k == 0)
                 {
                     moveTarget = 20;
-                    for (int i = 0; i < map.GetLength(0); i++)
-                    {
-                        for (int j = 0; j < map.GetLength(1); j++)  //일반이동
-                        {
-                            if (moveTarget == map[i, j])
-                            {
-                                Printmap[i, j] = HorseNumber;
-                                Printmap[horseX, horseY] = BackUpmap[horseX, horseY];
-                                horseX = i;
-                                horseY = j;
-                            }
-                        }
-                    }
-                }
-                else if (moveTarget == 30 && k != 0&& before!=21)
-                {
-                    moveTarget = 22;
                     for (int i = 0; i < map.GetLength(0); i++)
                     {
                         for (int j = 0; j < map.GetLength(1); j++)  //일반이동
@@ -259,7 +238,7 @@ namespace Conet_ConsoleGame
                         }
                     }
                 }
-                else if (moveTarget == 30 && k != 0 && before==21)
+                else if (moveTarget == 30 && k != 0)
                 {
                     moveTarget = 26;
                     for (int i = 0; i < map.GetLength(0); i++)
@@ -276,7 +255,7 @@ namespace Conet_ConsoleGame
                         }
                     }
                 }
-                else if (moveTarget == 21 || moveTarget == 25)
+                else if ( moveTarget == 25)
                 {
                     moveTarget = 30;
                     for (int i = 0; i < map.GetLength(0); i++)
@@ -289,7 +268,23 @@ namespace Conet_ConsoleGame
                                 Printmap[horseX, horseY] = BackUpmap[horseX, horseY];
                                 horseX = i;
                                 horseY = j;
-                                before = map[i, j];
+                            }
+                        }
+                    }
+                }
+                else if (moveTarget == 21&&k!=0)
+                {
+                    moveTarget = 26;
+                    for (int i = 0; i < map.GetLength(0); i++)
+                    {
+                        for (int j = 0; j < map.GetLength(1); j++)  //일반이동
+                        {
+                            if (moveTarget == map[i, j])
+                            {
+                                Printmap[i, j] = HorseNumber;
+                                Printmap[horseX, horseY] = BackUpmap[horseX, horseY];
+                                horseX = i;
+                                horseY = j;
                             }
                         }
                     }
@@ -347,109 +342,28 @@ namespace Conet_ConsoleGame
                                 Printmap[horseX, horseY] = BackUpmap[horseX, horseY];
                                 horseX = i;
                                 horseY = j;
-                                before = map[i, j];
                             }
                         }
                     }
                 }
              
             }
-            //무브타겟증가
-            //맵으로 연동
-            //맵출력
-
-
-
-
-
-
-            //for (int i=0;i<map.GetLength(0);i++) 
-            //{
-            //    for(int j=0;j<map.GetLength(1);i++)  //배열에 있는 플레이어 위치 쳌
-            //    {
-            //        if(HorseNumber==map[i,j])
-            //        {
-            //            moveTargetX = i;
-            //            moveTargetY = j;
-            //        }
-            //    }
-            //}
-            //for(int i=0; i<moveCount;i++)
-            //{
-            //    if(moveTargetX == 7&& moveTargetY == 0&&i==0) //처음 움직일때 오른쪽윗모서리
-            //    {
-            //        map[moveTargetX-1, moveTargetY +1] = HorseNumber;
-            //        map[moveTargetX, moveTargetY] = BackUpmap[moveTargetX, moveTargetY];
-            //    }               
-            //    else if(moveTargetX == 0 && moveTargetY == 0 && i == 0) //처음 움직일때 왼쪽윗모서리
-            //    {
-            //        map[moveTargetX +1, moveTargetY + 1] = HorseNumber;
-            //        map[moveTargetX, moveTargetY] = BackUpmap[moveTargetX, moveTargetY];
-            //    }
-            //    else  if (moveTargetX == 4 && moveTargetY == 4 && i == 0)//처음움직일때 가운데
-            //    {
-            //        map[moveTargetX + 1, moveTargetY + 1] = HorseNumber;
-            //        map[moveTargetX, moveTargetY] = BackUpmap[moveTargetX, moveTargetY];
-            //    }
-
-            //    if (moveTargetX == 7 && moveTargetY == 0)
-            //    {
-            //        map[moveTargetX -1, moveTargetY] = HorseNumber;
-            //        map[moveTargetX, moveTargetY] = BackUpmap[moveTargetX, moveTargetY];
-            //    }
-            //    if (moveTargetX == 0 && moveTargetY == 0)
-            //    {
-            //        map[moveTargetX , moveTargetY + 1] = HorseNumber;
-            //        map[moveTargetX, moveTargetY] = BackUpmap[moveTargetX, moveTargetY];
-            //    }
-            //    if (moveTargetX == 0 && moveTargetY == 7)
-            //    {
-            //        map[moveTargetX + 1, moveTargetY] = HorseNumber;
-            //        map[moveTargetX, moveTargetY] = BackUpmap[moveTargetX, moveTargetY];
-            //    }
-
-
-
-
-            //    if (moveTargetX==7)  //오른쪽 라인일때
-            //    {
-            //        if(map[moveTargetX,moveTargetY-1]==0)
-            //        {
-            //            map[moveTargetX, moveTargetY -2] = HorseNumber;
-            //            map[moveTargetX, moveTargetY] = BackUpmap[moveTargetX, moveTargetY];
-            //        }
-            //        else if(map[moveTargetX, moveTargetY - 1] == 1)
-            //        {
-            //            map[moveTargetX, moveTargetY - 1] = HorseNumber;
-            //            map[moveTargetX, moveTargetY] = BackUpmap[moveTargetX, moveTargetY];
-
-            //        }
-            //        else if (map[moveTargetX, moveTargetY - 1] == 2)
-            //        {
-            //            map[moveTargetX, moveTargetY - 1] = HorseNumber;
-            //            map[moveTargetX, moveTargetY] = BackUpmap[moveTargetX, moveTargetY];
-            //        }
-            //    }
-            //    if (moveTargetX == 7)  //왼쪽 라인일때
-            //    {
-            //        if (map[moveTargetX, moveTargetY + 1] == 0)
-            //        {
-            //            map[moveTargetX, moveTargetY + 2] = HorseNumber;
-            //            map[moveTargetX, moveTargetY] = BackUpmap[moveTargetX, moveTargetY];
-            //        }
-            //        else if (map[moveTargetX, moveTargetY + 1] == 1)
-            //        {
-            //            map[moveTargetX, moveTargetY + 1] = HorseNumber;
-            //            map[moveTargetX, moveTargetY] = BackUpmap[moveTargetX, moveTargetY];
-
-            //        }
-            //        else if (map[moveTargetX, moveTargetY - 1] == 2)
-            //        {
-            //            map[moveTargetX, moveTargetY + 1] = HorseNumber;
-            //            map[moveTargetX, moveTargetY] = BackUpmap[moveTargetX, moveTargetY];
-            //        }
-            //    }
-            //}
+        }
+        static void MoveRender(int HorseNumber,int moveTarget, int horseX, int horseY)
+        {
+            for (int i = 0; i < map.GetLength(0); i++)
+            {
+                for (int j = 0; j < map.GetLength(1); j++)  //일반이동
+                {
+                    if (moveTarget == map[i, j])
+                    {
+                        Printmap[i, j] = HorseNumber;
+                        Printmap[horseX, horseY] = BackUpmap[horseX, horseY];
+                        horseX = i;
+                        horseY = j;
+                    }
+                }
+            }
         }
 } }
 
