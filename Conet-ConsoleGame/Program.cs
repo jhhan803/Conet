@@ -43,8 +43,8 @@ namespace Conet_ConsoleGame
           {15, 16, 17, 0,  18, 19, 0 },
          };
 
-
-        static void ShowPanel()
+        //테스트
+        static void ShowPanel()ㄴ
         {
             Console.SetCursorPosition(0, 0);
 ;            for (int i = 0; i < map.GetLength(0); i++)
